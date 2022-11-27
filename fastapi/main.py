@@ -23,7 +23,7 @@ app.add_middleware(
 )
 
 summarizer = pipeline("summarization") 
-summarizer = AutoModelForSeq2SeqLM.from_pretrained("sshleifer/distilbart-cnn-12-6")
+# summarizer = AutoModelForSeq2SeqLM.from_pretrained("sshleifer/distilbart-cnn-12-6")
 
 def video_summarizer(url):
     try :
