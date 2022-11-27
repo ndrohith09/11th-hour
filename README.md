@@ -1,68 +1,57 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 11th Hour 
+![11th hour](https://user-images.githubusercontent.com/73429989/204120651-dd25000d-b54d-4cfd-a523-13f409b9b125.png)
 
-## Available Scripts
+## Problem Statement 
+Many excellent films were produced a few decades ago. However, those movies are only in black and white and not in colour. These days' viewers don't like black and white films. Old movie colour restoration will be a tedious job. Additionally, summarising a film for subtitles, blogging, documentation, or any other purpose might be difficult and take up to two or three hours. What if we could sum up an entire film in a matter of seconds? What if we could bring back the colour of old films such that theatre owners across the globe would profit from this?
 
-In the project directory, you can run:
+## Solution 
+Color restoration can be achieved with the help of NoGAN. This is a new type of GAN training that have been developed to solve some key problems in the previous DeOldify model . It provides the benefits of GAN training while spending minimal time doing direct GAN training . Summarization can be achieved with the help of transformers. The Transformer is the first transduction model relying entirely on self-attention to compute representations of its input and output without using sequence-aligned RNNs or convolution .
 
-### `yarn start`
+## Inspiration
+Artificial Intelligence the most heard word now-a-days . The booming technology can be used in many domains. We wanted to use GAN one of the deep learning concept to restore colors for the films. To summarize the films we need to work on Natural Language Processing . Hence we chose hugging face transformers to process those textual content.  
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## What it does
+11th hour is a web application which is used to restore color for films and summarizer films for condense use in theatres.  User uploads the film url in the afield provided such that we process the film and summarizer the content present in the film . Once the content has been output, the user can save the contextual description using his mobile number. User will get the context to his provided mobile number. Next comes the color restoration . Users can upload the film url such that GANS will process the film and produces a colored output of the film.  
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+**Output of Color restoration** 
+![image](https://user-images.githubusercontent.com/73429989/204120065-21944adf-571b-4137-bbfe-6db21aade5c9.png)
 
-### `yarn test`
+![video](https://camo.githubusercontent.com/e70cf6f9b5523c5c638852306692721cb9322b5282d9c308a2c978f06fd0c84e/68747470733a2f2f7468756d62732e6766796361742e636f6d2f48656176794c6f6e65426c6f77666973682d73697a655f726573747269637465642e676966) 
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Transformer Model Architecture** 
 
-### `yarn build`
+![architecture](https://user-images.githubusercontent.com/73429989/204120170-b0136f22-b371-4d42-bb40-6191bfa0ddb8.png)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Architecture** 
+![image](https://user-images.githubusercontent.com/73429989/204120354-c435b289-bfd4-40ac-9733-fc2b763fd86d.png) 
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## How we built it
+- The summarizer was built with the help of transformers and huggingface.
+- `distilbart-cnn-12-6 ` was used for summarizing text from films.   
+- The color restoration was created based on DeOldify model. 
+- The DeOldify is based on python and is used with help of fastai. 
+- Chakra UI and React JS were used to create the user interface.
+- We used FastAPI as our backend to integrate our NLP model with the UI.
+- Axios library was used in ReactJS to fetch FastAPI.
+- Twilio Services was used to send message.
+ 
+## Challenges we ran into
+- Applying pre-trained deep learning model required a significant amount of time and computation power.  
+- It was difficult to integrate our deep learning model with the user interface.
+- Using hugging face transforms was an aesthetic taste.
+- Integrating color restoration domain in the application was the toughest part.
+- It took us time to understand the NLP and color restoration models.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Accomplishments that we're proud of
+- We were able to create an amazing application that can restore color for old films and can summarise the entire film within seconds
+- Possibly developing a web application and incorporating this model was incredible.
+- Sending acknowledgements with twilio was an interesting part of our application.
 
-### `yarn eject`
+## What we learned
+We gained a lot of knowledge about NLP models and their uses. We learned a little bit about MLOps. Probably more information regarding Transformers was learned. For interfacing with the web application, we worked on Api's.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## What's next for 11th Hour
+- Should try to reduce the process time for each request.
+- Improve the summarization with more options which will be flexible for users.
+- Working on to improve the processing speed of the color restoration .
+- Make file upload field available for color restoration application.
