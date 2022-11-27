@@ -91,17 +91,7 @@ async def predict(
     print("url" , url)  
     if url.__contains__("youtube"):
         print("youtube")
-        # summary = video_summarizer(url) 
-
-        summary = '''
-        Rescue teams are working throught the night to save 12 boys and their coach, trapped inside a cave. 
-        The monsoon had come early. 
-        Conditions in the cave were impossible. We need expert cave divers out here. 
-        The Thai Navy SEALs put everything they had into it. But only this group of 
-        people who do it as a weekend hobby has those skills. "It's about controlling your emotions and fear.
-        Panic is death, in the cave," he says.He came up with an actual logistical plan for the dive. 
-        "We came up with an actual logistical plan for the dive. "We were brutally honest. We promised multiple fatalities", he adds. "Once you start you cannot stop.Believe Believe".
-        '''
+        summary = video_summarizer(url) 
     else:
         pass 
 
