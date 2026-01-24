@@ -27,5 +27,7 @@ tensorflow-cpu
 typing_extensions==4.4.0
 urllib3==1.26.12
 uvicorn==0.19.0
-torch==1.11.0
+torch==2.10.0
 youtube-transcript-api==0.5.0
+pyasn1>=0.6.2 # not directly required, pinned by Snyk to avoid a vulnerability
+wheel>=0.46.2 # not directly required, pinned by Snyk to avoid a vulnerability
